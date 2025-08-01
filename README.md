@@ -1,3 +1,79 @@
+# 🎙️ Speech Detection / VAD Plugin for OBS
+
+This is an OBS Studio plugin that provides real-time **speech detection** using **voice activity detection (VAD)**.  
+It is designed for live streamers, VTubers, and developers who want to trigger animations, expressions, or effects based on whether the user is speaking — and how much.
+
+---
+
+## 🔧 Features
+
+- 🔊 Real-time voice activity detection from OBS audio input
+- 🟢 Optional integration with Unity via **UDP** or WebSocket
+- 📈 Supports future expansion to phoneme-based lip-sync
+- 🖥️ Lightweight C++ OBS audio filter (no dependencies beyond OBS + optional Qt6)
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Requirements
+
+- OBS Studio 29+
+- CMake 3.20+
+- Qt6 (optional, for UI controls)
+- Windows / macOS / Linux
+
+---
+
+### 📦 Building from Source
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/speech-detection-vad-for-obs.git
+   cd speech-detection-vad-for-obs
+   ```
+
+2. Configure the build:
+
+```bash
+cmake -B build -DCMAKE_INSTALL_PREFIX="path/to/your/obs-studio"
+```
+
+3. Build and install:
+
+```bash
+cmake --build build --target install
+```
+Restart OBS. Add a new Audio Filter to any audio input called 🎙 Speech Detector Filter
+
+
+
+### 🎮 Unity Integration (Optional)
+
+If you want to drive mouth animations or expressions in Unity:
+
+Enable the UDP output toggle in OBS plugin settings.
+
+Use the included Unity C# UDP listener to receive:
+
+isSpeaking boolean
+
+(or) speech energy level
+
+(or) viseme labels like AH, M, O for full lip-sync
+
+🧩 More details and Unity package coming soon!
+
+
+📜 License
+MIT License — free to use and modify.
+
+
+
+
+Built on +
+
+
 # OBS Plugin Template
 
 ## Introduction
