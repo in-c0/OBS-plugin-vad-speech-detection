@@ -33,13 +33,13 @@
     },
     "platformConfig": {
         "macos": {
-            "bundleId": "com.example.plugintemplate-for-obs"
+            "bundleId": "com.in-c0.speech-detection-vad"
         }
     },
-    "name": "plugintemplate-for-obs",
-    "displayName": "Plugin Template for OBS",
-    "version": "1.0.0",
-    "author": "Your Name Here",
-    "website": "https://example.com",
-    "email": "me@example.com"
+    "name": "speech-detection-vad-for-obs",
+    "displayName": "Speech Detection / VAD (Voice Activity) Detection Plugin for OBS",
+    "version": "0.0.1",
+    "author": "in-c0",
+    "website": "https://github.com/in-c0",
+    "email": "nyakoraiden@gmail.com"
 }
