@@ -1,6 +1,6 @@
 /*
-Plugin Name
-Copyright (C) <Year> <Developer> <Email Address>
+Speech Detection For OBS
+Copyright (C) 2025 in-c0 nyakoraiden@gmail.com
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,17 +18,23 @@ with this program. If not, see <https://www.gnu.org/licenses/>
 
 #include <obs-module.h>
 #include <plugin-support.h>
+#include "vad_filter.h"
+
+const char *PLUGIN_NAME = "speech-vad-plugin";
+const char *PLUGIN_VERSION = "0.0.1";
 
 OBS_DECLARE_MODULE()
 OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
 
 bool obs_module_load(void)
 {
-	obs_log(LOG_INFO, "plugin loaded successfully (version %s)", PLUGIN_VERSION);
-	return true;
+    obs_log(LOG_INFO, "[%s] Loaded (version %s)", PLUGIN_NAME, PLUGIN_VERSION);
+
+    register_vad_filter();
+    return true;
 }
 
 void obs_module_unload(void)
 {
-	obs_log(LOG_INFO, "plugin unloaded");
+    obs_log(LOG_INFO, "[%s] Unloaded", PLUGIN_NAME);
 }

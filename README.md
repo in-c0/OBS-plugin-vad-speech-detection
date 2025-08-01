@@ -58,23 +58,16 @@ model = Model("models/vosk-model-en-us-0.22")
 
 ### 📦 Building from Source
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/speech-detection-vad-for-obs.git
-   cd speech-detection-vad-for-obs
-   ```
-
-2. Configure the build:
-
+If you cloned from obs-plugintemplate and renamed your plugin (e.g., speech-vad):
 ```bash
-cmake -B build -DCMAKE_INSTALL_PREFIX="path/to/your/obs-studio"
+git clone https://github.com/yourusername/speech-detection-vad-for-obs.git
+cd speech-detection-vad-for-obs
+
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX="C:\Program Files\obs-studio\bin\64bit\obs64.exe" 
+cmake --build . --config Release --target install
 ```
 
-3. Build and install:
-
-```bash
-cmake --build build --target install
-```
 Restart OBS. Add a new Audio Filter to any audio input called 🎙 Speech Detector Filter
 
 
