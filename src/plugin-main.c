@@ -20,9 +20,6 @@ with this program. If not, see <https://www.gnu.org/licenses/>
 #include <plugin-support.h>
 #include "vad_filter.h"
 
-const char *PLUGIN_NAME = "speech-vad-plugin";
-const char *PLUGIN_VERSION = "0.0.1";
-
 OBS_DECLARE_MODULE()
 OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
 
