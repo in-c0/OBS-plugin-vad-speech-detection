@@ -64,7 +64,7 @@ git clone https://github.com/yourusername/speech-detection-vad-for-obs.git
 cd speech-detection-vad-for-obs
 
 mkdir build && cd build
-cmake .. -DCMAKE_INSTALL_PREFIX="C:\Program Files\obs-studio\bin\64bit\obs64.exe" 
+cmake .. -DCMAKE_INSTALL_PREFIX="C:\Program Files\obs-studio\bin\64bit\" 
 cmake --build . --config Release --target install
 ```
 
