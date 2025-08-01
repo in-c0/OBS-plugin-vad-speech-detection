@@ -41,3 +41,9 @@ if(ENABLE_QT)
 endif()
 
 set_target_properties_plugin(${CMAKE_PROJECT_NAME} PROPERTIES OUTPUT_NAME ${_name})
+
+set(OBS_PLUGIN_DESTINATION_DIR "obs-plugins/64bit")
+
+install(TARGETS ${CMAKE_PROJECT_NAME}
+  RUNTIME DESTINATION "${OBS_PLUGIN_DESTINATION_DIR}"
+)
