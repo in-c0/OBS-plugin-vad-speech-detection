@@ -24,3 +24,8 @@
 
 # Exclude CMake build number cache
 /cmake/.CMakeBuildNumber
+
+
+!vosk-vad.py
+!models/README.md
+!models/.gitkeep

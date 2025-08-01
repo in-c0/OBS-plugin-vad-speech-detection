@@ -15,6 +15,25 @@ Faster than Whisper; uses Vosk for native phoneme detection. Expected latency: ~
 
 It is designed for live streamers, VTubers, and developers who want to trigger animations, expressions, or effects based on the user's speech (and expected mouth shape).
 
+
+### ! Important ! 
+
+#### Model Selection (For Phoneme Detection) ####
+
+To enable phoneme-based mouth animation, use a Vosk model that supports phone output:
+
+```text
+Model	Size	Phoneme Support	Link
+vosk-model-small-en-us-0.15	~50MB	🚫 Basic only
+vosk-model-en-us-0.22	~180MB	✅ Recommended
+```
+
+Latest releases can be downloaded via https://alphacephei.com/vosk/models
+
+```python
+model = Model("models/vosk-model-en-us-0.22")
+```
+
 ---
 
 ## 🔧 Features
