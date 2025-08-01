@@ -68,7 +68,10 @@ cmake .. -DCMAKE_INSTALL_PREFIX="C:\Program Files\obs-studio"
 cmake --build . --config Release --target install
 ```
 
-Restart OBS. Add a new Audio Filter to any audio input called 🎙 Speech Detector Filter
+(You may need to open terminal with Admin rights for successful build)
+
+Restart OBS > Audio Input Source (Right-click) > Filters > Add new filter > Speech VAD Filter should now appear.
+(If not, check `C:\Program Files\obs-studio\obs-plugins\64bit\speech-detection-vad-for-obs.dll` exists after cmake build and install)
 
 
 
