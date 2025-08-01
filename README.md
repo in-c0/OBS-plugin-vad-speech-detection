@@ -1,6 +1,18 @@
 # 🎙️ Speech Detection / VAD Plugin for OBS
 
 This is an OBS Studio plugin that provides real-time **speech detection** using **voice activity detection (VAD)**.  
+
+Faster than Whisper; uses Vosk for native phoneme detection. Expected latency: ~100–300ms
+
+```text
+| Phoneme | Example | Mouth shape |
+| ------- | ------- | ----------- |
+| /a/     | “cat”   | wide open   |
+| /oo/    | “food”  | round lips  |
+| /m/     | “mom”   | closed lips |
+| /th/    | “think” | tongue out  |
+```
+
 It is designed for live streamers, VTubers, and developers who want to trigger animations, expressions, or effects based on whether the user is speaking — and how much.
 
 ---
