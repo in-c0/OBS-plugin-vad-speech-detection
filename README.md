@@ -7,10 +7,10 @@ It is designed for live streamers, VTubers, and developers who want to trigger a
 
 ## 🔧 Features
 
-- 🔊 Real-time voice activity detection from OBS audio input
-- 🟢 Optional integration with Unity via **UDP** or WebSocket
-- 📈 Supports future expansion to phoneme-based lip-sync
-- 🖥️ Lightweight C++ OBS audio filter (no dependencies beyond OBS + optional Qt6)
+- 🔊 Real-time voice activity detection from OBS audio input  
+- 🟢 Optional integration with Unity via **UDP** or WebSocket  
+- 📈 Supports future expansion to phoneme-based lip-sync  
+- 🖥️ Lightweight C++ OBS audio filter (no dependencies beyond OBS + optional Qt6)  
 
 ---
 
@@ -18,10 +18,10 @@ It is designed for live streamers, VTubers, and developers who want to trigger a
 
 ### ✅ Requirements
 
-- OBS Studio 29+
-- CMake 3.20+
-- Qt6 (optional, for UI controls)
-- Windows / macOS / Linux
+- OBS Studio 29+  
+- CMake 3.20+  
+- Qt6 (optional, for UI controls)  
+- Windows / macOS / Linux  
 
 ---
 
@@ -52,17 +52,16 @@ Restart OBS. Add a new Audio Filter to any audio input called 🎙 Speech Detect
 
 If you want to drive mouth animations or expressions in Unity:
 
-Enable the UDP output toggle in OBS plugin settings.
+- Enable the UDP output toggle in OBS plugin settings.
 
-Use the included Unity C# UDP listener to receive:
+- Use the included Unity C# UDP listener to receive: 
+   
+   - isSpeaking boolean
+   
+   - (or) speech energy level
+   
+   - (or) viseme labels like AH, M, O for full lip-sync
 
-isSpeaking boolean
-
-(or) speech energy level
-
-(or) viseme labels like AH, M, O for full lip-sync
-
-🧩 More details and Unity package coming soon!
 
 
 📜 License
@@ -71,7 +70,9 @@ MIT License — free to use and modify.
 
 
 
-Built on +
+-----
+
+This plugin was built on...
 
 
 # OBS Plugin Template
