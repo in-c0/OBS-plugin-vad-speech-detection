@@ -13,7 +13,7 @@ Faster than Whisper; uses Vosk for native phoneme detection. Expected latency: ~
 | /th/    | “think” | tongue out  |
 ```
 
-It is designed for live streamers, VTubers, and developers who want to trigger animations, expressions, or effects based on whether the user is speaking — and how much.
+It is designed for live streamers, VTubers, and developers who want to trigger animations, expressions, or effects based on the user's speech (and expected mouth shape).
 
 ---
 
