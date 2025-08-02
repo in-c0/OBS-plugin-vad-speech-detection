@@ -1,8 +1,6 @@
-# 🎙️ Speech Detection / VAD Plugin for OBS
 
-This is an OBS Studio plugin that provides real-time **speech detection** using **voice activity detection (VAD)**.  
-
-Faster than Whisper; uses Vosk for native phoneme detection. Expected latency: ~100–300ms
+A plugin for real-time **speech detection** using Vosk VAD (voice activity detection) with phoneme recognization. Plug into Unity+mediapipe to rig mouth animation based on the sound you make with your voice.
+Faster than Whisper. Expected latency: ~100–300ms
 
 ```text
 | Phoneme | Example | Mouth shape |
@@ -18,18 +16,15 @@ It is designed for live streamers, VTubers, and developers who want to trigger a
 
 ### ! Important ! 
 
-#### Model Selection (For Phoneme Detection) ####
-
-To enable phoneme-based mouth animation, use a Vosk model that supports phone output:
+To enable phoneme-based mouth animation, you need to download the full Vosk model in `/models`:
 
 ```text
-Model	Size	Phoneme Support	Link
-vosk-model-small-en-us-0.15	~50MB	🚫 Basic only
-vosk-model-en-us-0.22	~180MB	✅ Recommended
+vosk-model-small-en-us-0.15	~50MB	🚫 Phoneme not supported
+vosk-model-en-us-0.22	~180MB	✅ Supported
 ```
 
 Latest releases can be downloaded via https://alphacephei.com/vosk/models
-
+Make sure to refer to the correct model in the python code.
 ```python
 model = Model("models/vosk-model-en-us-0.22")
 ```
