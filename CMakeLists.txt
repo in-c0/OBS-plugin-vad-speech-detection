@@ -17,6 +17,7 @@ target_sources(${CMAKE_PROJECT_NAME}
   PRIVATE
     src/plugin-main.c
     src/vad_filter.c
+    src/vad_debug.c
 )
 
 find_package(libobs REQUIRED)
